@@ -19,39 +19,36 @@ First install/import the ExchangeOnlineManagement module
 Import-Module ExchangeOnlineManagement 
 ```
 
-### check installed version, this must be at least Version 2
+check installed version, this must be at least Version 2
 ``` 
 Get-Module ExchangeOnlineManagement 
 ```
 
 
-### Connect ot Office365 Exchane Online
+Connect ot Office365 Exchane Online
 ``` 
 Connect-ExchangeOnline -UserPrincipalName username@domain.tld 
 ```
 
-### There will be a pop-up to login with user credentials.
+There will be a pop-up to login with user credentials.
 
-### Now check if the import the users.csv file works, you will see the list of the users in this file.
+Now check if the import the users.csv file works, you will see the list of the users in this file.
 ``` Import-Csv C:\Users\myuser\users.csv ```
 
-### If the check shows all users you can load the file into memory variable $Users
+If the check shows all users you can load the file into memory variable $Users
 ```
 $Users = Import-Csv  C:\Users\italiaander\users.csv 
 ```
 
 
-### Import all users to the SecurityGroup (replace YourSecurityGroupName with a existing securitygroup) and copy past this
+Import all users to the SecurityGroup (replace YourSecurityGroupName with a existing securitygroup) and copy past this
+
 ```
 foreach ($User in $Users) {
     # Retrieve UPN
     $UPN = $User.UserPrincipalName
-
-
-   
-   Add-DistributionGroupMember -Identity "YourSecurityGroupName" -Member $UPN
-   }
-
+    Add-DistributionGroupMember -Identity "YourSecurityGroupName" -Member $UPN
+    }
 ```
 
 
@@ -60,5 +57,8 @@ foreach ($User in $Users) {
 
 
 check if import worked with this command
-``` Get-DistributionGroupMember -Identity "YourSecurityGroupName" ```
+``` 
+Get-DistributionGroupMember -Identity "YourSecurityGroupName" 
+```
+
 
