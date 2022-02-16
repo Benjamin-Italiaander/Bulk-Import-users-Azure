@@ -2,7 +2,8 @@
 This is a small tutorial how to bulk add users to AzureAD security groups and Exchange Online Mail-enabled-Security-groups.
 
 
-### First export a security group of create a list of names by creating a flie with the content showed below and save this file as c:\Users\myuser\users.csv
+First export a security group or create a list of names
+You can create a file with the content showed below and save this file as c:\Users\myuser\users.csv
  
 ```
 UserPrincipalName
@@ -15,6 +16,7 @@ user2@domain.tld
 
 Open evilated-powershell (powershell as administrator) i prefer to use ISE-powershell
 First install/import the ExchangeOnlineManagement module
+
 ``` 
 Import-Module ExchangeOnlineManagement 
 ```
