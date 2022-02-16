@@ -1,16 +1,17 @@
-# Bulk-Import-users-Azure
+# Bulk Import users into AzureAD or ExchangeOnline Security groups and Mail-enabled-Security-groups
 This is a small tutorial how to bulk add users to AzureAD security groups and Exchange Online Mail-enabled-Security-groups.
 
-First export a security group by creating a flie with the content showed below and save this file as c:\Users\myuser\users.csv
- 
 
+###First export a security group of create a list of names by creating a flie with the content showed below and save this file as c:\Users\myuser\users.csv
+ 
+```
 UserPrincipalName
 -----------------
 user1@domain.tld
 user2@domain.tld
 user2@domain.tld
 user2@domain.tld
-
+```
 
 #Open evilated-powershell (powershell as administrator) i prefer to use ISE-powershell
 
