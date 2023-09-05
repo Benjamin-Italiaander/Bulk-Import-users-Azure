@@ -13,8 +13,7 @@ user2@domain.tld
 user2@domain.tld
 user2@domain.tld
 ```
-
-Open evilated-powershell (powershell as administrator) i prefer to use ISE-powershell
+Open elevated-powershell (powershell as administrator) i prefer to use ISE-powershell
 First install/import the ExchangeOnlineManagement module
 
 ``` 
